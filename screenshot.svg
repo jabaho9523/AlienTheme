@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- =========================================================
+       Alien — Obsidian theme preview (stand-in screenshot)
+       ========================================================= -->
+  <defs>
+    <linearGradient id="phosBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#1c8f51"/>
+      <stop offset="50%" stop-color="#67ffac"/>
+      <stop offset="100%" stop-color="#1c8f51"/>
+    </linearGradient>
+    <linearGradient id="hrFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#36e07a" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#36e07a" stop-opacity="0.55"/>
+      <stop offset="80%" stop-color="#36e07a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#36e07a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="65%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.60"/>
+    </radialGradient>
+    <filter id="phosGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1600" height="1000" fill="#04070a"/>
+
+  <!-- ============== TITLE BAR ============== -->
+  <rect x="0" y="0" width="1600" height="34" fill="#04070a"/>
+  <line x1="0" y1="34" x2="1600" y2="34" stroke="#1d2a30" stroke-width="1"/>
+  <!-- traffic lights -->
+  <circle cx="20" cy="17" r="6" fill="#e8473a"/>
+  <circle cx="40" cy="17" r="6" fill="#ff9d2f"/>
+  <circle cx="60" cy="17" r="6" fill="#36e07a"/>
+  <text x="800" y="22" fill="#36e07a" font-size="12" text-anchor="middle" font-weight="600" letter-spacing="0.05em">NOSTROMO VAULT — logs/distress-signal.md</text>
+
+  <!-- ============== LEFT RIBBON ============== -->
+  <rect x="0" y="34" width="48" height="966" fill="#04070a"/>
+  <line x1="48" y1="34" x2="48" y2="1000" stroke="#1d2a30" stroke-width="1"/>
+
+  <!-- ribbon icons (simple glyphs) -->
+  <g stroke="#7c8c89" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- search -->
+    <g transform="translate(16,60)">
+      <circle cx="8" cy="8" r="6"/>
+      <line x1="13" y1="13" x2="17" y2="17"/>
+    </g>
+    <!-- new file -->
+    <g transform="translate(16,100)">
+      <path d="M3 1 H11 L17 7 V17 H3 Z"/>
+      <path d="M11 1 V7 H17"/>
+    </g>
+    <!-- graph (active — phosphor) -->
+    <g transform="translate(16,140)" stroke="#36e07a">
+      <circle cx="10" cy="10" r="3"/>
+      <circle cx="3"  cy="3"  r="2"/>
+      <circle cx="17" cy="4"  r="2"/>
+      <circle cx="4"  cy="17" r="2"/>
+      <circle cx="17" cy="17" r="2"/>
+      <line x1="10" y1="10" x2="3"  y2="3"/>
+      <line x1="10" y1="10" x2="17" y2="4"/>
+      <line x1="10" y1="10" x2="4"  y2="17"/>
+      <line x1="10" y1="10" x2="17" y2="17"/>
+    </g>
+    <!-- bookmark -->
+    <g transform="translate(16,180)">
+      <path d="M4 2 H16 V18 L10 14 L4 18 Z"/>
+    </g>
+    <!-- tag -->
+    <g transform="translate(16,220)">
+      <path d="M2 10 L10 2 H17 V9 L9 17 Z"/>
+      <circle cx="13" cy="6" r="1.2" fill="#7c8c89" stroke="none"/>
+    </g>
+    <!-- settings (bottom) -->
+    <g transform="translate(16,940)">
+      <circle cx="10" cy="10" r="3"/>
+      <path d="M10 1 V4 M10 16 V19 M1 10 H4 M16 10 H19 M3.5 3.5 L5.5 5.5 M14.5 14.5 L16.5 16.5 M3.5 16.5 L5.5 14.5 M14.5 5.5 L16.5 3.5"/>
+    </g>
+  </g>
+  <!-- active indicator -->
+  <rect x="0" y="138" width="3" height="24" fill="#36e07a"/>
+
+  <!-- ============== FILE EXPLORER ============== -->
+  <rect x="48" y="34" width="280" height="966" fill="#04070a"/>
+  <line x1="328" y1="34" x2="328" y2="1000" stroke="#1d2a30" stroke-width="1"/>
+
+  <!-- explorer header -->
+  <text x="68" y="68" fill="#7c8c89" font-size="11" letter-spacing="0.12em" font-weight="600">NOSTROMO VAULT</text>
+  <line x1="68" y1="80" x2="308" y2="80" stroke="#1d2a30"/>
+
+  <!-- folders / files -->
+  <g font-size="13" fill="#ccd6d2">
+    <!-- folder: logs (open) -->
+    <text x="72" y="104" fill="#7c8c89" font-size="10">▾</text>
+    <text x="88" y="104" font-weight="500">logs</text>
+    <text x="104" y="126">flight-recorder.md</text>
+    <!-- active file pill -->
+    <rect x="100" y="138" width="208" height="22" rx="4" fill="#36e07a" fill-opacity="0.12"/>
+    <rect x="100" y="138" width="2"  height="22" fill="#36e07a"/>
+    <text x="108" y="153" fill="#36e07a">distress-signal.md</text>
+    <text x="104" y="174">crew-manifest.md</text>
+    <text x="104" y="194">special-order-937.md</text>
+
+    <text x="72" y="222" fill="#7c8c89" font-size="10">▸</text>
+    <text x="88" y="222" font-weight="500">crew</text>
+    <text x="72" y="246" fill="#7c8c89" font-size="10">▾</text>
+    <text x="88" y="246" font-weight="500">specimen</text>
+    <text x="104" y="268">egg.md</text>
+    <text x="104" y="288">facehugger.md</text>
+    <text x="104" y="308">xenomorph.md</text>
+
+    <text x="72" y="336" fill="#7c8c89" font-size="10">▸</text>
+    <text x="88" y="336" font-weight="500">systems</text>
+    <text x="72" y="360" fill="#7c8c89" font-size="10">▸</text>
+    <text x="88" y="360" font-weight="500">weyland-yutani</text>
+
+    <text x="88" y="384" fill="#ccd6d2">mu-th-ur-6000.md</text>
+    <text x="88" y="404" fill="#ccd6d2">index.md</text>
+  </g>
+
+  <!-- explorer footer hint -->
+  <text x="68" y="970" fill="#56635f" font-size="10">7 crew · 4 folders</text>
+
+  <!-- ============== TAB STRIP ============== -->
+  <rect x="328" y="34" width="1272" height="40" fill="#04070a"/>
+  <line x1="328" y1="74" x2="1600" y2="74" stroke="#1d2a30" stroke-width="1"/>
+
+  <!-- active tab (phosphor spotlight) -->
+  <g>
+    <rect x="344" y="40" width="240" height="34" rx="4" fill="#0a1014" stroke="#1d2a30"/>
+    <!-- hide bottom border by overlapping with the hull-color tab bottom -->
+    <rect x="345" y="72" width="238" height="3" fill="#0a1014"/>
+    <rect x="344" y="40" width="240" height="2" fill="url(#phosBar)"/>
+    <text x="360" y="61" fill="#36e07a" font-size="12" font-weight="600" filter="url(#phosGlow)">distress-signal.md</text>
+    <text x="568" y="61" fill="#7c8c89" font-size="14">×</text>
+  </g>
+
+  <!-- inactive tabs -->
+  <g font-size="12" fill="#7c8c89">
+    <text x="600" y="61">crew-manifest.md</text>
+    <text x="730" y="61">xenomorph.md</text>
+    <text x="830" y="61">special-order-937.md</text>
+    <text x="960" y="61">mu-th-ur-6000.md</text>
+  </g>
+
+  <!-- right pane toggles -->
+  <g stroke="#7c8c89" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <g transform="translate(1500,52)">
+      <rect x="0" y="0" width="16" height="12" rx="1"/>
+      <line x1="10" y1="0" x2="10" y2="12"/>
+    </g>
+    <g transform="translate(1540,52)" stroke="#36e07a">
+      <circle cx="6" cy="6" r="5"/>
+      <line x1="9.5" y1="9.5" x2="13" y2="13"/>
+    </g>
+  </g>
+
+  <!-- ============== EDITOR PANE ============== -->
+  <rect x="328" y="74" width="1272" height="900" fill="#04070a"/>
+
+  <!-- Editor content (centered column ~640px wide) -->
+  <g transform="translate(560,110)">
+    <!-- frontmatter / MU-TH-UR data block -->
+    <rect x="0" y="0" width="2" height="80" fill="#36e07a"/>
+    <rect x="2" y="0" width="640" height="80" fill="#0a1014" rx="0"/>
+    <text x="20" y="22" fill="#36e07a" font-size="10" font-family="JetBrains Mono, Menlo, monospace" letter-spacing="0.08em">MU-TH-UR 6000</text>
+    <text x="20" y="42" fill="#7c8c89" font-size="11" font-family="JetBrains Mono, Menlo, monospace">tags:  #signal  #lv-426  #priority-1</text>
+    <text x="20" y="60" fill="#7c8c89" font-size="11" font-family="JetBrains Mono, Menlo, monospace">date:  2122-06-03   ·   status:  rerouted</text>
+
+    <!-- H1 -->
+    <text x="0" y="130" fill="#67ffac" font-size="34" font-weight="700" letter-spacing="-0.01em" filter="url(#phosGlow)">Distress Signal</text>
+    <line x1="0" y1="142" x2="640" y2="142" stroke="#36e07a" stroke-opacity="0.25"/>
+
+    <!-- body paragraph -->
+    <g fill="#ccd6d2" font-size="14">
+      <text x="0" y="175">Transmission intercepted from the surface of LV-426.</text>
+      <text x="0" y="195">Acoustic beacon, repeating. Company protocol is clear.</text>
+      <text x="0" y="215">In space, no one can hear you <tspan fill="#b6d957" font-weight="700">scream</tspan> <tspan>·</tspan> <tspan fill="#45cfe0" font-style="italic">— investigate.</tspan></text>
+    </g>
+
+    <!-- H2 -->
+    <text x="0" y="260" fill="#36e07a" font-size="22" font-weight="650">Transcript</text>
+    <line x1="0" y1="270" x2="640" y2="270" stroke="#36e07a" stroke-opacity="0.15"/>
+
+    <!-- Blockquote -->
+    <rect x="0" y="290" width="3" height="74" fill="#36e07a"/>
+    <rect x="3" y="290" width="640" height="74" fill="#36e07a" fill-opacity="0.04"/>
+    <text x="22" y="316" fill="#ccd6d2" font-size="14" font-style="italic">"I can't lie to you about your chances, but... you have</text>
+    <text x="22" y="338" fill="#ccd6d2" font-size="14" font-style="italic">my sympathies." — decoded from beacon channel 7</text>
+
+    <!-- Tasks -->
+    <text x="0" y="400" fill="#36e07a" font-size="22" font-weight="650">Orders</text>
+    <line x1="0" y1="410" x2="640" y2="410" stroke="#36e07a" stroke-opacity="0.15"/>
+
+    <g font-size="14" fill="#ccd6d2">
+      <!-- checked -->
+      <rect x="0" y="425" width="14" height="14" rx="2" fill="#36e07a" stroke="#36e07a"/>
+      <path d="M4 432 L7 435 L11 429" stroke="#04070a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="437" fill="#56635f" text-decoration="line-through">Wake crew from hypersleep</text>
+
+      <rect x="0" y="450" width="14" height="14" rx="2" fill="#36e07a" stroke="#36e07a"/>
+      <path d="M4 457 L7 460 L11 454" stroke="#04070a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="462" fill="#56635f" text-decoration="line-through">Trace beacon to derelict ship</text>
+
+      <!-- unchecked -->
+      <rect x="0" y="475" width="14" height="14" rx="2" fill="none" stroke="#2b3a40" stroke-width="1.5"/>
+      <text x="24" y="487">Quarantine returning team <tspan fill="#36e07a">[[Kane]]</tspan></text>
+
+      <rect x="0" y="500" width="14" height="14" rx="2" fill="none" stroke="#2b3a40" stroke-width="1.5"/>
+      <text x="24" y="512">Cross-reference <tspan fill="#e8473a">[[special-order-937]]</tspan></text>
+    </g>
+
+    <!-- HR -->
+    <line x1="0" y1="555" x2="640" y2="555" stroke="url(#hrFade)" stroke-width="1"/>
+
+    <!-- H3 -->
+    <text x="0" y="590" fill="#2bc46f" font-size="18" font-weight="600">MU-TH-UR query</text>
+
+    <!-- Code block -->
+    <rect x="0" y="605" width="640" height="148" rx="5" fill="#080d10" stroke="#1d2a30"/>
+    <g font-family="JetBrains Mono, Menlo, monospace" font-size="12.5">
+      <text x="14" y="628">
+        <tspan fill="#5d6b67" font-style="italic">// interrogate the science officer</tspan>
+      </text>
+      <text x="14" y="648">
+        <tspan fill="#36e07a" font-weight="600">const</tspan>
+        <tspan fill="#ccd6d2"> directive </tspan>
+        <tspan fill="#c3ccc8">= </tspan>
+        <tspan fill="#45cfe0">await</tspan>
+        <tspan fill="#ccd6d2"> mother.</tspan>
+        <tspan fill="#45cfe0">query</tspan>
+        <tspan fill="#7c8c89">(</tspan>
+        <tspan fill="#b6d957">"order 937"</tspan>
+        <tspan fill="#7c8c89">, </tspan>
+        <tspan fill="#9a7ad6">{</tspan>
+      </text>
+      <text x="14" y="668">
+        <tspan fill="#ccd6d2">  </tspan>
+        <tspan fill="#9a7ad6">clearance</tspan>
+        <tspan fill="#c3ccc8">: </tspan>
+        <tspan fill="#b6d957">"science officer"</tspan>
+        <tspan fill="#7c8c89">,</tspan>
+      </text>
+      <text x="14" y="688">
+        <tspan fill="#ccd6d2">  </tspan>
+        <tspan fill="#9a7ad6">crew</tspan>
+        <tspan fill="#c3ccc8">: </tspan>
+        <tspan fill="#ff9d2f">7</tspan>
+        <tspan fill="#7c8c89">,</tspan>
+      </text>
+      <text x="14" y="708">
+        <tspan fill="#ccd6d2">  </tspan>
+        <tspan fill="#9a7ad6">expendable</tspan>
+        <tspan fill="#c3ccc8">: </tspan>
+        <tspan fill="#ff9d2f">true</tspan>
+        <tspan fill="#7c8c89">,</tspan>
+      </text>
+      <text x="14" y="728">
+        <tspan fill="#9a7ad6">}</tspan>
+        <tspan fill="#7c8c89">)</tspan>
+      </text>
+      <text x="14" y="748">
+        <tspan fill="#5d6b67" font-style="italic">// → crew expendable. priority one.</tspan>
+      </text>
+    </g>
+
+    <!-- Tags row -->
+    <g transform="translate(0,790)">
+      <g>
+        <rect x="0" y="0" width="74" height="22" rx="11" fill="#36e07a" fill-opacity="0.10" stroke="#36e07a" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#36e07a" font-size="11">#signal</text>
+      </g>
+      <g transform="translate(86,0)">
+        <rect x="0" y="0" width="74" height="22" rx="11" fill="#36e07a" fill-opacity="0.10" stroke="#36e07a" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#36e07a" font-size="11">#lv-426</text>
+      </g>
+      <g transform="translate(172,0)">
+        <rect x="0" y="0" width="100" height="22" rx="11" fill="#36e07a" fill-opacity="0.10" stroke="#36e07a" stroke-opacity="0.30"/>
+        <text x="12" y="15" fill="#36e07a" font-size="11">#priority-1</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- vignette overlay on editor pane -->
+  <rect x="328" y="74" width="1272" height="900" fill="url(#vignette)" pointer-events="none"/>
+
+  <!-- ============== STATUS BAR ============== -->
+  <rect x="0" y="974" width="1600" height="26" fill="#04070a"/>
+  <line x1="0" y1="974" x2="1600" y2="974" stroke="#1d2a30"/>
+  <g font-size="11" fill="#7c8c89" letter-spacing="0.02em">
+    <text x="60" y="991">7 logs</text>
+    <text x="120" y="991">·</text>
+    <text x="136" y="991">284 words</text>
+    <text x="216" y="991">·</text>
+    <text x="232" y="991">backlinks: 3</text>
+    <text x="1400" y="991">spell ✓</text>
+    <text x="1466" y="991" fill="#e8473a">● self-destruct</text>
+  </g>
+</svg>
