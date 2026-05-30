@@ -1,4 +1,4 @@
-# Xenophos — an Obsidian theme
+# Alien — an Obsidian theme
 
 A deep-space terminal theme for [Obsidian](https://obsidian.md). The black of
 deep space, the green phosphor glow of an old CRT ship-computer, acid lime, and
@@ -25,9 +25,9 @@ grey so heading hierarchy stays legible at a glance.
 
 ### Manually
 
-1. Copy this folder into your vault at `<vault>/.obsidian/themes/Xenophos/`
+1. Copy this folder into your vault at `<vault>/.obsidian/themes/Alien/`
    — the folder must contain `manifest.json` and `theme.css`.
-2. In Obsidian: **Settings → Appearance → Themes → Xenophos**.
+2. In Obsidian: **Settings → Appearance → Themes → Alien**.
 
 ### From the community directory
 
