@@ -566,8 +566,10 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   font-weight: 600;
 }
 
-/* Checkboxes */
-.theme-dark input[type="checkbox"] {
+/* Checkboxes — scoped to Markdown task list items so we don't clobber
+   Obsidian's toggle switches (which use a hidden checkbox in .checkbox-container) */
+.theme-dark .markdown-preview-view input[type="checkbox"],
+.theme-dark .markdown-source-view input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 16px;
@@ -581,16 +583,19 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   transition: border-color 120ms ease, background-color 120ms ease;
 }
 
-.theme-dark input[type="checkbox"]:hover {
+.theme-dark .markdown-preview-view input[type="checkbox"]:hover,
+.theme-dark .markdown-source-view input[type="checkbox"]:hover {
   border-color: var(--al-phosphor);
 }
 
-.theme-dark input[type="checkbox"]:checked {
+.theme-dark .markdown-preview-view input[type="checkbox"]:checked,
+.theme-dark .markdown-source-view input[type="checkbox"]:checked {
   background-color: var(--al-phosphor);
   border-color: var(--al-phosphor);
 }
 
-.theme-dark input[type="checkbox"]:checked::after {
+.theme-dark .markdown-preview-view input[type="checkbox"]:checked::after,
+.theme-dark .markdown-source-view input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -674,7 +679,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
 
 .theme-dark button,
 .theme-dark .clickable-icon,
-.theme-dark input,
+.theme-dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 .theme-dark textarea,
 .theme-dark select {
   background-color: var(--al-bulkhead);
@@ -713,7 +718,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   border-color: var(--al-alert);
 }
 
-.theme-dark input:focus,
+.theme-dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
 .theme-dark textarea:focus,
 .theme-dark select:focus {
   border-color: var(--al-phosphor);
