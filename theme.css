@@ -1,8 +1,8 @@
 /*
-  Alien — an Obsidian theme inspired by the original Alien films.
-  The look of the Nostromo: deep-space black, the green phosphor glow of
-  MU-TH-UR's terminals, acid-blood lime, hazard amber, and a red alert
-  reserved for things that have gone wrong.
+  Xenophos — a deep-space terminal theme for Obsidian.
+  Deep-space black, the green phosphor glow of an old CRT ship-computer,
+  acid lime, hazard amber, and a red alert reserved for things that have
+  gone wrong.
   Palette:
     Void Black        #04070a
     Hull              #0a1014
@@ -112,10 +112,11 @@
   --tag-border-color:     rgba(54, 224, 122, 0.30);
   --tag-border-color-hover: var(--al-phosphor);
 
-  /* Code */
+  /* Code — terminal readout: base text glows digital phosphor green */
+  --al-terminal:      #7fe6a6;
   --code-background:  #080d10;
-  --code-normal:      var(--al-bone);
-  --code-comment:     #5d6b67;
+  --code-normal:      var(--al-terminal);
+  --code-comment:     #4f7a63;
   --code-keyword:     var(--al-phosphor);
   --code-function:    var(--al-cyan);
   --code-tag:         var(--al-phosphor-bright);
@@ -194,7 +195,7 @@
   --radius-l: 8px;
 }
 
-/* Light variant — "off-ship": LV-426 daylight. Same DNA, softened. */
+/* Light variant — "powered down": daylight off the ship. Same DNA, softened. */
 .theme-light {
   --al-paper:        #eef2ee;
   --al-paper-2:      #e3e9e3;
@@ -243,6 +244,7 @@
   --link-external-color:  var(--al-cyan);
 
   --code-background: #e1e7e0;
+  --code-normal:     #0f5e34;
   --code-comment:    #7c857d;
   --code-keyword:    var(--al-phosphor);
   --code-function:   var(--al-cyan);
@@ -402,6 +404,7 @@
 }
 
 /* Headings — phosphor terminal glow, descending in intensity */
+/* (the green CRT glow of an old ship-computer readout) */
 .theme-dark .markdown-preview-view h1,
 .theme-dark .HyperMD-header-1,
 .theme-dark .cm-header-1 {
@@ -439,7 +442,7 @@
 .theme-dark .HyperMD-header-6,
 .theme-dark .cm-header-6 { color: var(--h6-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
 
-/* Strong / em — acid blood and scanner cyan */
+/* Strong / em — acid lime and scanner cyan */
 .theme-dark .markdown-preview-view strong,
 .theme-dark .cm-strong { color: var(--al-acid); font-weight: 700; }
 
@@ -475,14 +478,20 @@ body.theme-dark .HyperMD-codeblock-bg {
   background-color: var(--code-background);
   border: 1px solid var(--al-conduit);
   border-radius: var(--radius-m);
-  color: var(--al-bone);
+  color: var(--code-normal);
 }
 
 .theme-dark pre code {
   background: transparent;
   border: none;
-  color: var(--al-bone);
+  color: var(--code-normal);
   padding: 0;
+}
+
+/* Live-preview code block text — keep the digital green terminal readout */
+.theme-dark .HyperMD-codeblock,
+.theme-dark .cm-line.HyperMD-codeblock {
+  color: var(--code-normal);
 }
 
 /* Syntax highlighting (Prism-style classes used by Obsidian preview) */
@@ -848,7 +857,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
 }
 
 /* =========================================================
-   7. CALLOUTS — re-skinned with the Alien palette
+   7. CALLOUTS — re-skinned with the Xenophos palette
    ========================================================= */
 
 .theme-dark .callout {
@@ -878,7 +887,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
 .theme-dark .callout[data-callout="cite"]     { --callout-color: 154, 122, 214; }
 
 /* =========================================================
-   8. SUBTLE NOSTROMO TOUCHES
+   8. SUBTLE TERMINAL TOUCHES
    ========================================================= */
 
 /* Soft phosphor vignette on the active editor — the glow of a CRT */
@@ -886,7 +895,7 @@ body.theme-dark .cm-hmd-internal-link.is-unresolved {
   box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.50);
 }
 
-/* Frontmatter — read like a MU-TH-UR data block */
+/* Frontmatter — read like a ship-computer data block */
 .theme-dark .frontmatter,
 .theme-dark .metadata-container {
   background-color: var(--al-hull);

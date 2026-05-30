@@ -1,9 +1,8 @@
-# Alien — an Obsidian theme
+# Xenophos — an Obsidian theme
 
-A theme for [Obsidian](https://obsidian.md) inspired by the original *Alien*
-films. The deep black of space, the green phosphor glow of the Nostromo's
-MU-TH-UR terminals, acid-blood lime, and hazard amber — with a red alert held
-back for errors and unresolved links.
+A deep-space terminal theme for [Obsidian](https://obsidian.md). The black of
+deep space, the green phosphor glow of an old CRT ship-computer, acid lime, and
+hazard amber — with a red alert held back for errors and unresolved links.
 
 ## Palette
 
@@ -26,9 +25,9 @@ grey so heading hierarchy stays legible at a glance.
 
 ### Manually
 
-1. Copy this folder into your vault at `<vault>/.obsidian/themes/Alien/`
+1. Copy this folder into your vault at `<vault>/.obsidian/themes/Xenophos/`
    — the folder must contain `manifest.json` and `theme.css`.
-2. In Obsidian: **Settings → Appearance → Themes → Alien**.
+2. In Obsidian: **Settings → Appearance → Themes → Xenophos**.
 
 ### From the community directory
 
@@ -38,11 +37,11 @@ Not yet listed. PRs welcome.
 
 - Obsidian 1.4+
 - Default core plugins (Graph, Outline, Tags, Search, Bookmarks)
-- Light mode included (off-ship — LV-426 daylight, softened green + amber)
+- Light mode included (powered down — softened green + amber daylight)
 
 ## Notes
 
-- Headings, links, tags, and the active tab glow in MU-TH-UR phosphor green.
+- Headings, links, tags, and the active tab glow in CRT phosphor green.
 - Code blocks use a near-black terminal background with green keywords, acid-lime
   strings, and amber numbers.
 - Blockquotes get a green left bar and a faint glow — the terminal "signal" motif.
